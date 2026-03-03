@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: readers-service
+          uri: lb://readers-service
+          predicates:
+            - Path=/api/readers/**
+
+        - id: loans-service
+          uri: lb://loans-service
+          predicates:
+            - Path=/api/loans/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+    registry-fetch-interval-seconds: 5
