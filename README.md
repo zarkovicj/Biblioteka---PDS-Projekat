@@ -29,7 +29,7 @@ Pre pokretanja projekta, potrebno je instalirati:
 
 ```bash
 # 1. Kloniraj projekat
-git clone <repository-url>
+git clone <https://github.com/zarkovicj/Biblioteka---PDS-Projekat.git>
 cd Biblioteka
 
 # 2. Build JAR fajlove
@@ -47,7 +47,7 @@ docker-compose down
 
 ```bash
 # 1. Kloniraj projekat
-git clone <repository-url>
+git clone <https://github.com/zarkovicj/Biblioteka---PDS-Projekat.git>
 cd Biblioteka
 
 # 2. Eureka Server
